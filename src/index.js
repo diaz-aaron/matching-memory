@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './app/App.js';
 import './index.css';
+import { Provider } from 'react-redux';
 
 import { store } from './app/store.js';
 // Add import statement below
@@ -9,7 +10,8 @@ import { store } from './app/store.js';
 
 ReactDOM.render(
   // Implement Provider component with store below
-  
-    <App />,
+<Provider store={store}>
+  <App  />
+</Provider>,
   document.getElementById('root')
 );
